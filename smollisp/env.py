@@ -4,7 +4,32 @@
 
 import math 
 import operator as op 
-from .types import Env,List,Number,Symbol
+from .types import List,Number,Symbol
+
+class Env(dict):
+    '''
+    an env dict of {'var' : val} pairs ,  with an outer Env.
+    '''
+    def __init__(self,parms=(),args=(),outer=None):
+        self.update(zip(parms,args))
+        self.outer = outer  
+
+    def find(self,var):
+        '''
+        find the innermost Env where var appears.
+        ''' 
+        if var in self:
+            return self 
+        else:
+            return self.outer.find(var)
+        
+class Procedure():
+    '''user defined lisp procedure'''
+    def __init__(self,parms,body,env):
+        self.parms,self.body,self.env = parms,body,env 
+
+    def __call__(self,*args):
+        return eval(self.body,Env(self.parms,args,self.env))
 
 def standard_env() -> Env:
     env = Env()

@@ -23,7 +23,7 @@ def eval(x: Exp,env=global_env) -> Exp: # type: ignore
     elif x[0] =="define":
         # definition 
         (_,symbol,exp) = x 
-        env[symbol] = eval(exp,env)
+        env[symbol] = eval(exp,env)     
     else:
         #procedure call 
         proc = eval(x[0],env)

@@ -1,23 +1,4 @@
-## smollisp
+## gungnir
 
-an LISP(1) interpreter written in Typescript + Bun , following along Peter Norvig's [blogpost](https://norvig.com/lispy.html)
+An implementation of a Lisp interpreter in Python following the [make a lisp challenge](https://github.com/kanaka/mal)
 
-Using Bun's compilation, this builds to a single binary that can be distributed.
-
-### Install
-
-```sh
-bun install
-```
-
-- build:
-
-```sh
-bun run build
-```
-
-and then run the executable from
-
-```sh
-./dist/smollisp
-```

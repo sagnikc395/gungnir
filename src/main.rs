@@ -17,4 +17,9 @@ fn tokenize(chars: &str) -> Vec<String> {
 
 fn main() {
     let program = "(begin (define r 10) (* pi (* r r)))";
+    let tokenize_result = tokenize(&program);
+
+    for item in tokenize_result.iter() {
+        println!("{}", item);
+    }
 }

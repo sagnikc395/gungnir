@@ -1,3 +1,4 @@
 ## gungnir
 
-An Lisp Interpreter written in Rust.
+An Lisp Interpreter written in C.
+

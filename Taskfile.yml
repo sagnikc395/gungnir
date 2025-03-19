@@ -11,6 +11,10 @@ tasks:
       - echo "{{.GREETING}}"
     silent: true
   
+  run:
+    cmds:
+      - go run ./main.go ./parser.go ./data.go
+
   build:
     cmds:
-      - go build ./main.go ./repl.go
+      - go build ./main.go ./parser.go ./data.go

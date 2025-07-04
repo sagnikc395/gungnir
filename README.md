@@ -1,6 +1,6 @@
 ## gungnir
 
-An Lisp Interpreter written in Go.
+An Lisp Interpreter written in Python.
 
 ### Learning Resource 
 

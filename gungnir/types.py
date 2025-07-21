@@ -3,7 +3,7 @@
 # using pydantic libary since it supports discriminated union for us
 #
 from pydantic import BaseModel
-from typing import Annotated, Literal, Union
+from typing import  Union
 
 # symbol is implemented as type of string 
 class Symbol(BaseModel):

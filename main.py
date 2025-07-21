@@ -1,8 +1,8 @@
-from gungnir import parser
+from gungnir.parser import Parser
 
 def main():
     program = "(begin (define r 10) (* pi (* r r)))"
-    p = parser.Parser.tokenize(program)
+    p = Parser().tokenize(program)
     print(p)
 
     
